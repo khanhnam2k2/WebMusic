@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Music</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <img src="./images/logo.png" alt="" class="logo">
+            <nav id="navMenu">
+                
+                <ul>
+                    <li><a href="">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="">SPECIFICATIONS</a></li>
+                    <li><a href="">PRODUCT</a></li>
+                    <li><a href="">CONNECT</a></li>
+                </ul>
+            </nav>
+          
+
+        </div>
+        <div class="content">
+            <div class="content-left">
+                <h1>THE<br> REAL<br> SOUND</h1>
+            </div>
+            <div class="content-right">
+                <p>Click Here to Listen</p>
+                <img src="./images/play.png"id="icon-play" alt="">
+            </div>
+        </div>
+    </div>
+
+    <audio id="myMusic">
+        <source src="./images/SeeTinh-HoangThuyLinh-7130526.mp3" type="audio/mp3">
+    </audio>
+
+    <script>
+        var  myMusic = document.getElementById("myMusic");
+        var icon = document.getElementById("icon-play");
+        icon.onclick = function(){
+           if(myMusic.paused){
+               myMusic.play();
+               icon.src="./images/pause.png";
+           }
+           else{
+               myMusic.pause();
+               icon.src= "/images/play.png";
+           }
+          
+        }
+        
+       
+    </script>
+</body>
+</html>
